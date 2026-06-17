@@ -3,7 +3,7 @@ FROM oven/bun:1 AS base
 FROM base AS deps
 WORKDIR /app
 COPY package.json  ./
-RUN bun install --frozen-lockfile
+RUN bun install --frozen-lockfile --network-concurrency 5
 
 FROM base AS builder
 WORKDIR /app
