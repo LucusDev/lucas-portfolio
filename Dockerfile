@@ -3,7 +3,9 @@ FROM oven/bun:1 AS base
 FROM base AS deps
 WORKDIR /app
 COPY package.json  ./
-RUN bun install --frozen-lockfile --network-concurrency 5
+
+ENV UV_THREADPOOL_SIZE=1
+RUN bun install --frozen-lockfile --network-concurrency 1 --smol
 
 FROM base AS builder
 WORKDIR /app
