@@ -9,6 +9,13 @@ export const personalInfo = {
   resumeFile: "/HtetAungShineResume.pdf",
 };
 
+export const recommendation = {
+  name: "Aung Myo Kyaw",
+  title: "Managing Director",
+  company: "Xlance Collective",
+  pdfFile: "/HtetAungShineRecommendationLetter.pdf",
+};
+
 export const skills = [
   { category: "Mobile", items: ["Flutter", "Dart", "Android", "iOS"] },
   { category: "Web", items: ["Next.js", "React", "TypeScript", "HTML/CSS"] },
